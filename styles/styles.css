@@ -28,59 +28,96 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote {
+	font-family: "PT Sans", sans-serif;
+	font-size: 23px;
+	color: black;
+	line-height: 29px;
+	margin-bottom: 30px;
 }
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 h1 {
-   font-size: 60 px
-	 line-height: 46px;
-	 margin-top: 16 px;
-
+font-family: "PT Sans Caption", sans-serif;
+font-size: 40px;
+font-weight: bolder;
+margin-bottom: 80px;
+margin-top: 16px;
 }
-h1 + p  {
-	margin-top: 14px;
-	font-size: 22px;
-	line-height: 32px;
-
+a{
+	color: #b0c4de;
 }
-h2{
-	margin-top: 43px;
-	font-size: 32px;
-	line-height: 32px;
+h2 {
+font-family: "PT Sans Caption", sans-serif;
+font-size: 30px;
+font-weight: bolder;
+margin-bottom: 10px;
 }
 h3 {
-	margin-top: 36px;
-	font-size: 28px;
-	line-height: 34px;
+font-family: "PT Sans Caption", sans-serif;
+font-size: 20px;
+font-weight: bolder;
+margin-bottom: 10px;
 }
-h3 + p {
-	margin-top:  6px;
-
+p:first-of-type {
+font-style: "PT Sans Caption", sans-serif;
+font-size: 23px;
+margin-bottom: 30px;
 }
 p {
-   font-size: 22px;
-	 line-height: 34px;
-
+font-family: "PT Sans", sans-serif;
+font-size: 23px;
+color: black;
+line-height: 29px;
+margin-bottom: 30px;
 }
+ul {
+font-family: "PT Sans", sans-serif;
+font-size: 23px;
+line-height: 30px;
+}
+
 body {
-    width: 700px;
-		margin-top: 70px;
-		margin-right: auto;
-		margin-bottom: 0;
-		margin-left: auto;
+background-size: 800px 20624px;
+background-position: top center;
+background-repeat: no-repeat;
+width: 700px;
+margin: 0 auto;
+margin-top: 69px;
+}
+img {
+  display: block;
+  width: 1020px;
+  margin: 80px auto;
+}
+ul {
+ list-style-type: none;
+}
+/* Нужно обязательно указать высоту строки и позиционирование */
+ul li {
+    font-size: 23px;
+    line-height: 46px;
+    position: relative;
+		font-family: "PT Sans", sans-serif;
+}
+ul li::before {
+    color: black;
+    /* UTF-8 escape sequence, соответствующая символу "Маркер списка" */
+		content:"\2022";
+    /* Делаем больше, чем основной текст в li */
+    font-size: 23px;
+    left: -15px;
+    /* Высота строки и позиционирование необходимы для выравнивания по вертикали */
+    line-height: 46px;
+    position: absolute;
+    top: 0;
 }
